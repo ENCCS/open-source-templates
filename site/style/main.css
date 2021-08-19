@@ -35,8 +35,12 @@ a.cover-link {
   margin-bottom: 0;
 }
 img.cover-image {
-  width: 80%;
+  width: 70%;
   margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img.cyoa {
