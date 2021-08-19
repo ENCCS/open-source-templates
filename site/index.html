@@ -15,17 +15,6 @@
     <link rel="stylesheet" href="style/main.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
-    <!-- Google Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-24775009-1', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <!-- End Google Analytics -->
   </head>
   <body>
     <a href="#/page/1" class="cover-link">
@@ -47,79 +36,68 @@
 
     <div class="page" id="page-1">
       <h1>Chapter 1</h1>
-      <h2>The Overflowing Mailboxes</h2>
+      <h2>Pre-Exascale Machines on the Horizon</h2>
       <img src="img/alice25a.gif">
-      <p>You are standing in an open field west of a white house. The house is a carefully constructed masterpiece, with solid foundations and a beautiful facade matched by an elegant interior.</p>
-      <p>Around the back of the house you see a long line of people, all of them holding little white envelopes. They seem very eager to help with the house.</p>
-      <p>There are two mailboxes here.</p>
-      <p>The first mailbox is simply labeled <em>issues</em> ("as if I don't have enough of my own to deal with", you think to yourself).</p>
-      <p>The second is mysteriously labeled - <em>Pull Requests</em>.</p>
-      <p>Both are overflowing.</p>
+      <p>You are sitting at your desk. Your are looking at your code: a carefully constructed masterpiece, with solid foundations and a beautiful user interface.</p>
+      <p>A new fleet of (pre)-exascale machines is being built around Europe. <a href="https://www.lumi-supercomputer.eu/">LUMI is expected to deliver 550PFLOPs</a>: the most powerful of its generation.</p>
+      <p>These machines will open new avenues for high-performance computing. But you wonder, is the code ready to harness these machines? And if not, how can you port it to the next generation of supercomputers?</p>
       <ul>
-        <li>To open the <em>issues</em> box, <a href="#/page/37/type/issues">turn to page 37</a>.</li>
-        <li>To open the <em>pull requests</em> box, <a href="#/page/75/type/pull-requests">turn to page 75</a>.</li>
+        <li>If your code <em>can already run on GPUs</em>, <a href="#/page/37/type/issues">turn to page 37</a>.</li>
+        <li>If your code <em>cannot run on GPUs</em>, <a href="#/page/75/type/pull-requests">turn to page 75</a>.</li>
         <li>Realizing that your boss may be looking over your shoulder, you quickly hit the <a href="#" id="boss-key">BOSS key</a>.</li>
       </ul>
     </div>
 
     <div class="page" id="page-37">
       <div class="page-number">Page 37</div>
-      <h2>A Bottomless Pit</h2>
+      <h2>A Box Full of GPUs</h2>
       <img src="img/451px-Maelstrom-Clarke.jpg">
-      <p>You take a deep breath and open the box labeled <em>issues</em>.</p>
-      <p>The size of the box's interior surprises you. As you look into it, you are suddenly gripped by a feeling that the box has no bottom.</p>
-      <p>As you stare down into the seemingly bottomless pit of the box, you begin to feel a chill running down your spine. It is as if… as if the endless box of issues is staring right back into your soul.</p>
-      <p>It feels… judgy.</p>
+      <p>Your code is already taking advantage of <em>GPU acceleration</em>, likely using the <a href="https://docs.nvidia.com/cuda/index.html">CUDA programming language</a> or <a href="https://www.openacc.org/">OpenACC directives</a>.</p>
+      <p>The LUMI GPU partition will be powered by <a href="https://www.amd.com/en/products/server-accelerators/instinct-mi100">AMD Instinct MI100 accelerators</a>: some changes are in order!</p>
+      <p>You roll up your sleeves and explore your options.</p>
       <ul>
-        <li>Rolling up your sleeves, you decide to take charge of the <em>issues</em> box and <a href="#/page/38">turn to page 38</a>.</li>
-        <li>Fear overtakes you. You close the box with a high pitched yelp and <a href="#/page/1">turn back to page 1</a>.</li>
+        <li>If you write C++ <a href="#/page/38">turn to page 38</a>.</li>
+        <li>If you write C <a href="#/page/38">turn to page 38</a>.</li>
+        <li>If you write Fortran <a href="#/page/38">turn to page 38</a>.</li>
       </ul>
     </div>
 
     <div class="page" id="page-38">
       <div class="page-number">Page 38</div>
-      <h2>Angels and Demons</h2>
-      <img src="img/angelsversusdemons.jpg">
-      <p>As you reach down into the box, you begin to realize there is a strange order to the madness. You start to notice a pattern in the issues.</p>
-      <p>Some take the form of <em>bug reports</em>, grey festering blobs of infinite malevolence.</p>
-      <p>Others manifest themselves as great ethereal balls of living energy in the form of ideas. Whispering half truths of promised <em>features, improvements, and changes</em>.</p>
-      <p>You furrow your brow as you consider whether you should concentrate on one type of issue, or both.</p>
+      <h2>Porting C++ Code</h2>
+      <img src="img/ISO_C++_Logo.svg" height="150">
+      <p>C++ is a multi-paradigm programming language. It is flexible and allows you to get performance where you need it.</p>
+      <p>It enables you to build <em>high-level, zero-cost abstractions</em>.</p>
+      <p>It is also a complex language: you have many options to choose from in your quest for a path to GPU acceleration.</p>
       <ul>
-        <li>You decide to focus on <a href="#/page/39/description/bug">bug reports</a>.</li>
-        <li>You decide to prioritize <a href="#/page/39/description/feature">new features, improvements, and changes</a>.</li>
-        <li>You decide to accept both <a href="#/page/39/description/bug-or-feature">bug reports as well as proposals for new features, improvements, and changes</a>.</li>
+        <li>You are <em>adventurous</em>. You take this opportunity to rewrite your performance-critical kernels using one the <a href="#/page/39/description/bug">new high-level, parallel programming libraries</a>.</li>
+        <li>You are intimately familiar with <a href="https://docs.nvidia.com/cuda/index.html">CUDA</a>. You decide to try the automated conversion tools to the <a href="#/page/39/description/feature">HIP language</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <a href="#/page/39/description/bug-or-feature"><code>pragma</code>-based technology</a>.</li>
       </ul>
     </div>
 
     <div class="page" id="page-39">
       <div class="page-number">Page 39</div>
-      <h2>Two Sides to Every Schwartz</h2>
-      <img src="img/2book18.jpg">
-      <p>As you pull your head out of the <em>issues</em> mailbox, you are startled by a voice coming from behind you.</p>
-      <p>"So… what are you?"</p>
-      <p>They are standing under a tree, each with an arm round the other’s neck, and you know which is which in a moment, because one of them has <em>`front’</em> embroidered on his collar, and the other <em>`back’</em>.</p>
-      <p>"I'm sure I'm very sorry, but whatever do you mean?"</p>
-      <p>"There are two sides to every Schwartz," says the first. "Front end…"</p>
-      <p>"…and back end," adds his brother.</p>
+      <h2>Porting C Code</h2>
+      <img src="img/The_C_Programming_Language_logo.svg" height="150">
+      <p>.</p>
+      <p>C is a low-level, systems-programming language. You can be as close to the metal as you need to squeeze performance from your application.</p>
+      <p>You have two options to choose from in your quest for a path to GPU acceleration.</p>
       <ul>
-        <li>"<a href="#/page/42/environment/browser">My project runs in the browser</a>" you say, giving <em>back</em> a mistrusting look.</li>
-        <li>"<a href="#/page/42/environment/server">I am all about the server</a>" you say with some pride.</li>
-        <li>You roll your eyes at the twins and say "<a href="#/page/42/environment/browser-and-server">How quaint. Actually my code runs equally well on the server, as well as the browser</a>".</li>
+        <li>You are intimately familiar with <a href="https://docs.nvidia.com/cuda/index.html">CUDA</a>. You decide to try the automated conversion tools to the <a href="#/page/39/description/feature">HIP language</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <a href="#/page/39/description/bug-or-feature"><code>pragma</code>-based technology</a>.</li>
       </ul>
     </div>
 
     <div class="page" id="page-42">
       <div class="page-number">Page 42</div>
-      <h2>An Unexpected Guest</h2>
-      <img src="img/cheshire_cat.jpg">
-      <p>The brothers nod with understanding, give each other a knowing look and disappear into thin air.</p>
-      <p>"And that's that," says a voice from the tree above, startling you.</p>
-      <p>You look up and see a Cat grinning from ear to ear. Sensing your alarm, the Cat's grin somehow widens even more. You notice that it has very long claws and a great many teeth.</p>
-      <p>"Would you tell me, please, which way I ought to go from here?" you ask.</p>
-      <p>"That depends a good deal on where you want to get to," says the Cat. "You are either at the end of your road, or its beginning."</p>
+      <h2>Porting Fortran Code</h2>
+      <img src="img/640px-Lochkarte_FORTRAN.jpg">
+      <p>Fortran is the veteran of languages in computational sciences and engineering.</p>
+      <p>You have two options to choose from in your quest for a path to GPU acceleration.</p>
       <ul>
-        <li>Your journey feels complete, you feel ready to download your <a href="#/page/98">ISSUE_TEMPLATE.md</a></li>
-        <li>Something feels wrong, you <a href="#/page/1">turn around</a> and face the mailboxes again.</li>
+        <li>You are intimately familiar with <a href="https://developer.nvidia.com/cuda-fortran">CUDA Fortran</a> and the <code>iso_c_binding</code> Fortran2003 standard module. You decide to try <a href="#/page/39/description/feature"><code>hipfort</code></a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <a href="#/page/39/description/bug-or-feature"><code>pragma</code>-based technology</a>.</li>
       </ul>
     </div>
 
