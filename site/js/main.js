@@ -41,10 +41,10 @@
 
   var fetchContent = function(choiceKey, choiceValue, type) {
     type = type || choices['type'];
-    if (['description', 'environment', 'checklist', 'change-types'].indexOf(choiceKey) !== -1) {
+    if (['language', 'framework'].indexOf(choiceKey) !== -1) {
       var contentKey = type+'-'+choiceKey+'-'+choiceValue;
       if (content[contentKey] === undefined) {
-        $.get( "templates/"+type+"/"+choiceKey+"/"+choiceValue+".md", function(text) {
+        $.get( "templates/"+type+"/"+choiceKey+"/"+choiceValue+".html", function(text) {
           content[contentKey] = text;
           updateTextarea();
         });
@@ -56,20 +56,15 @@
 
   var updateTextarea = function() {
     var text = '';
-    if (choices['type'] === 'issues') {
-      text =  content['issues-description-'+choices['description']]+"\n"+
-              content['issues-environment-'+choices['environment']];
-    } else if (choices['type'] === 'pull-requests') {
-      text  = content['pull-requests-description-'+choices['description']]+"\n"+
-              content['pull-requests-change-types-bug-or-feature']+"\n"+
-              content['pull-requests-checklist-intro'];
-      ['contributing', 'tests'].forEach(function(checklistItem) {
-        if (choices['checklist'] && choices['checklist'][checklistItem]) {
-          text += content['pull-requests-checklist-'+checklistItem];
-        }
-      });
+    if (choices['type'] === 'gpu-yes') {
+      text = "Your code already runs on GPUs and " + content['gpu-yes-language-'+choices['language']]+"\n"+
+              content['gpu-yes-framework-'+choices['framework']];
+    } else if (choices['type'] === 'gpu-no') {
+      text  = "Your code does not run on GPUs, yet, and " + content['gpu-no-language-'+choices['language']]+"\n"+
+              content['gpu-no-framework-'+choices['framework']];
     }
-    $('textarea').val(text);
+    text += '\n<b>Remember!</b> Profiling and tuning are <em>essential</em> to obtain good performance!';
+    document.getElementById('summary').innerHTML = text;
   };
 
   var routes = {
@@ -85,14 +80,9 @@
 
   router.init();
 
-  fetchContent('change-types', 'bug-or-feature', 'pull-requests');
-  fetchContent('checklist', 'intro', 'pull-requests');
-
-  $('a.file-name').click(function() {
-    var filename = choices['type'] === 'issues' ? 'ISSUE_TEMPLATE.md' : 'PULL_REQUEST_TEMPLATE.md';
-    download($('textarea').val(), filename, "text/plain");
-    return false;
-  });
+  // needed?
+  fetchContent('change-types', 'gpu-yes', 'gpu-no');
+  fetchContent('checklist', 'intro', 'gpu-no');
 
   $('#boss-key').click(function() {
     var selector = 'p, h1, h2, img, div.author, div.page-number';

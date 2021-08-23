@@ -4,215 +4,150 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GitHub Issue and Pull Request Templates Generator</title>
-    <meta name="description" content="A PULL_REQUEST_TEMPLATE.md and ISSUE_TEMPLATE.md generator featuring Cthulhu and Lewis Carrol" />
+    <title>Port your code to LUMI</title>
+    <meta name="description" content="An interactive guide to the available paths for porting your code to LUMI, featuring Cthulhu and Lewis Carrol" />
     <meta property="og:image" content="https://www.talater.com/open-source-templates/img/cheshire_cat.jpg"/>
-    <meta property="og:title" content="GitHub Issue and Pull Request Templates"/>
-    <meta property="og:description" content="Generate PULL_REQUEST_TEMPLATE.md and ISSUE_TEMPLATE.md with the help of Lewis Carrol and H.P. Lovecraft"/>
-    <meta property="og:url" content="https://www.talater.com/open-source-templates/"/>
-    <meta property="og:site_name" content="Open Source Templates Generator"/>
+    <meta property="og:title" content="Explore port paths to LUMI"/>
+    <meta property="og:description" content="Explore paths for porting your code to LUMI with the help of Lewis Carrol and H.P. Lovecraft"/>
+    <meta property="og:url" content="https://enccs.github.io/port-to-lumi/"/>
+    <meta property="og:site_name" content="Port your code to LUMI"/>
     <meta property="fb:admins" content="568390229" />
     <link rel="stylesheet" href="style/main.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
-    <!-- Google Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-24775009-1', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <!-- End Google Analytics -->
+    <link rel="shortcut icon" href="img/favicon.ico"/>
   </head>
   <body>
     <a href="#/page/1" class="cover-link">
       <div class="cover">
         <img src="img/cyoa.png" alt="Choose Your Own Adventure" class="cyoa">
-        <h1>Open Source Templates</h1>
-        <h2>The Curious Case of the Issue and Pull Request Template</h2>
-        <div class="author">by Tal Ater</div>
-        <img src="img/cover.jpg" alt="The Curious Case of the Issue and Pull Request Template" class="cover-image">
+        <h1>Your Code and LUMI</h1>
+        <h2>The Many Paths to Exascale</h2>
+        <div class="author">
+            <a href="https://www.csc.fi/">CSC</a>
+            and
+            <a href="https://enccs.se/">ENCCS</a>
+        </div>
+        <img src="img/lumi-cabinet.jpg" alt="The many paths to exascale" class="cover-image">
+        <footnote class="cover">
+            Based on <a href="https://www.talater.com/open-source-templates">Open Source Templates</a>
+        </footnote>
       </div>
     </a>
 
     <div class="page" id="page-1">
       <h1>Chapter 1</h1>
-      <h2>The Overflowing Mailboxes</h2>
+      <h2>Pre-Exascale Machines on the Horizon</h2>
       <img src="img/alice25a.gif">
-      <p>You are standing in an open field west of a white house. The house is a carefully constructed masterpiece, with solid foundations and a beautiful facade matched by an elegant interior.</p>
-      <p>Around the back of the house you see a long line of people, all of them holding little white envelopes. They seem very eager to help with the house.</p>
-      <p>There are two mailboxes here.</p>
-      <p>The first mailbox is simply labeled <em>issues</em> ("as if I don't have enough of my own to deal with", you think to yourself).</p>
-      <p>The second is mysteriously labeled - <em>Pull Requests</em>.</p>
-      <p>Both are overflowing.</p>
+      <p>You are sitting at your desk. Your are looking at your code: a carefully constructed masterpiece, with solid foundations and a beautiful user interface.</p>
+      <p>A new fleet of (pre)-exascale machines is being built around Europe. <a href="https://www.lumi-supercomputer.eu/">LUMI is expected to deliver 550PFLOPs</a>: the most powerful of its generation.</p>
+      <p>These machines will open new avenues for high-performance computing. But you wonder, is the code ready to harness these machines? And if not, how can you port it to the next generation of supercomputers?</p>
       <ul>
-        <li>To open the <em>issues</em> box, <a href="#/page/37/type/issues">turn to page 37</a>.</li>
-        <li>To open the <em>pull requests</em> box, <a href="#/page/75/type/pull-requests">turn to page 75</a>.</li>
+        <li>If your code <em>can already run on GPUs</em>, <a href="#/page/37/type/gpu-yes">turn to page 37</a>.</li>
+        <li>If your code <em>cannot run on GPUs</em>, <a href="#/page/75/type/gpu-no">turn to page 75</a>.</li>
         <li>Realizing that your boss may be looking over your shoulder, you quickly hit the <a href="#" id="boss-key">BOSS key</a>.</li>
       </ul>
     </div>
 
     <div class="page" id="page-37">
       <div class="page-number">Page 37</div>
-      <h2>A Bottomless Pit</h2>
+      <h2>A Box Full of GPUs</h2>
       <img src="img/451px-Maelstrom-Clarke.jpg">
-      <p>You take a deep breath and open the box labeled <em>issues</em>.</p>
-      <p>The size of the box's interior surprises you. As you look into it, you are suddenly gripped by a feeling that the box has no bottom.</p>
-      <p>As you stare down into the seemingly bottomless pit of the box, you begin to feel a chill running down your spine. It is as if… as if the endless box of issues is staring right back into your soul.</p>
-      <p>It feels… judgy.</p>
+      <p>Your code is already taking advantage of <em>GPU acceleration</em>, likely using the <a href="https://docs.nvidia.com/cuda/index.html">CUDA programming language</a> or <a href="https://www.openacc.org/">OpenACC directives</a>.</p>
+      <p>The LUMI GPU partition will be powered by <a href="https://www.amd.com/en/products/server-accelerators/instinct-mi100">AMD Instinct MI100 accelerators</a>: some changes are in order!</p>
+      <p>There is a dizzying array of options in front of you: you roll up your sleeves and start exploring.</p>
       <ul>
-        <li>Rolling up your sleeves, you decide to take charge of the <em>issues</em> box and <a href="#/page/38">turn to page 38</a>.</li>
-        <li>Fear overtakes you. You close the box with a high pitched yelp and <a href="#/page/1">turn back to page 1</a>.</li>
-      </ul>
-    </div>
-
-    <div class="page" id="page-38">
-      <div class="page-number">Page 38</div>
-      <h2>Angels and Demons</h2>
-      <img src="img/angelsversusdemons.jpg">
-      <p>As you reach down into the box, you begin to realize there is a strange order to the madness. You start to notice a pattern in the issues.</p>
-      <p>Some take the form of <em>bug reports</em>, grey festering blobs of infinite malevolence.</p>
-      <p>Others manifest themselves as great ethereal balls of living energy in the form of ideas. Whispering half truths of promised <em>features, improvements, and changes</em>.</p>
-      <p>You furrow your brow as you consider whether you should concentrate on one type of issue, or both.</p>
-      <ul>
-        <li>You decide to focus on <a href="#/page/39/description/bug">bug reports</a>.</li>
-        <li>You decide to prioritize <a href="#/page/39/description/feature">new features, improvements, and changes</a>.</li>
-        <li>You decide to accept both <a href="#/page/39/description/bug-or-feature">bug reports as well as proposals for new features, improvements, and changes</a>.</li>
-      </ul>
-    </div>
-
-    <div class="page" id="page-39">
-      <div class="page-number">Page 39</div>
-      <h2>Two Sides to Every Schwartz</h2>
-      <img src="img/2book18.jpg">
-      <p>As you pull your head out of the <em>issues</em> mailbox, you are startled by a voice coming from behind you.</p>
-      <p>"So… what are you?"</p>
-      <p>They are standing under a tree, each with an arm round the other’s neck, and you know which is which in a moment, because one of them has <em>`front’</em> embroidered on his collar, and the other <em>`back’</em>.</p>
-      <p>"I'm sure I'm very sorry, but whatever do you mean?"</p>
-      <p>"There are two sides to every Schwartz," says the first. "Front end…"</p>
-      <p>"…and back end," adds his brother.</p>
-      <ul>
-        <li>"<a href="#/page/42/environment/browser">My project runs in the browser</a>" you say, giving <em>back</em> a mistrusting look.</li>
-        <li>"<a href="#/page/42/environment/server">I am all about the server</a>" you say with some pride.</li>
-        <li>You roll your eyes at the twins and say "<a href="#/page/42/environment/browser-and-server">How quaint. Actually my code runs equally well on the server, as well as the browser</a>".</li>
-      </ul>
-    </div>
-
-    <div class="page" id="page-42">
-      <div class="page-number">Page 42</div>
-      <h2>An Unexpected Guest</h2>
-      <img src="img/cheshire_cat.jpg">
-      <p>The brothers nod with understanding, give each other a knowing look and disappear into thin air.</p>
-      <p>"And that's that," says a voice from the tree above, startling you.</p>
-      <p>You look up and see a Cat grinning from ear to ear. Sensing your alarm, the Cat's grin somehow widens even more. You notice that it has very long claws and a great many teeth.</p>
-      <p>"Would you tell me, please, which way I ought to go from here?" you ask.</p>
-      <p>"That depends a good deal on where you want to get to," says the Cat. "You are either at the end of your road, or its beginning."</p>
-      <ul>
-        <li>Your journey feels complete, you feel ready to download your <a href="#/page/98">ISSUE_TEMPLATE.md</a></li>
-        <li>Something feels wrong, you <a href="#/page/1">turn around</a> and face the mailboxes again.</li>
-      </ul>
-    </div>
-
-    <div class="page" id="page-98">
-      <div class="page-number">Page 98</div>
-      <h1>Epilogue</h1>
-      <p>Your journey is complete. Your prize awaits. You are ready to return to The Hub.</p>
-      <div class="file-box">
-        <a href="#" class="file-name">ISSUE_TEMPLATE.md</a>
-        <span class="file-description">Place this file in your repository's root directory or a .github directory</span>
-      </div>
-      <div class="textarea"><textarea></textarea></div>
-      <p>You copy the contents of the <em>ISSUE_TEMPLATE.md</em> file, and place it in your repository.</p>
-      <ul>
-        <li>You decide to <a class="github-button" href="https://github.com/TalAter/open-source-templates" data-count-href="/TalAter/open-source-templates/stargazers" data-count-api="/repos/TalAter/open-source-templates#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star TalAter/open-source-templates on GitHub">Star</a> this on GitHub.</li>
-        <li>"Maybe I should <a href="https://twitter.com/intent/tweet?text=A%20GitHub%20issue%20and%20pull%20request%20template%20generator%20featuring%20Cthulhu%20and%20Lewis%20Carroll%20https%3A%2F%2Fwww.talater.com%2Fopen-source-templates%2F%20via%20%40TalAter" class="twitter-share-button" data-url="https://www.talater.com/open-source-templates/" data-text="A GitHub issue and pull request template generator featuring Cthulhu and Lewis Carroll" data-via="TalAter"><img src="img/tweet.png" class="tweet" /></a> this," you say to no one in particular.</li>
-        <li>You do not feel ready, you <a href="#/page/1">turn around</a> and start again.</li>
+        <li>If you write C++ <a href="#/page/38/language/cxx">turn to page 38</a>.</li>
+        <li>If you write C <a href="#/page/39/language/c">turn to page 39</a>.</li>
+        <li>If you write Fortran <a href="#/page/42/language/fortran">turn to page 42</a>.</li>
       </ul>
     </div>
 
     <div class="page" id="page-75">
       <div class="page-number">Page 75</div>
-      <h2>Looking-glass House</h2>
-      <img src="img/2book3.jpg">
-      <p>You peer into the mailbox. Through it you see a confused looking person standing in an open field east of a white house.</p>
-      <p>Startled, you raise your right hand to your mouth, stifling a scream. You stumble back just in time to see the person through the mailbox stumble back and raise their left hand.</p>
-      <p>You regain your composure (feeling a bit silly, having just been startled by a looking glass), and approach the mailbox again.</p>
-      <p>"Now, if you'll only attend," says the person visible through the mailbox, "I'll tell you all about Looking-glass House. First, there's the house you can see through the glass—that's just the same as your house, only the things go the other way."</p>
+      <h2>A Box Full of GPUs</h2>
+      <img src="img/451px-Maelstrom-Clarke.jpg">
+      <p>Your code does not use <em>GPU acceleration</em>, yet.</p>
+      <p>The LUMI GPU partition will be powered by <a href="https://www.amd.com/en/products/server-accelerators/instinct-mi100">AMD Instinct MI100 accelerators</a>: some changes are in order!</p>
+      <p>There is a dizzying array of options in front of you: you roll up your sleeves and start exploring.</p>
       <ul>
-        <li>The bizarre person in the looking glass intrigues you, and you decide to continue the conversation. You <a href="#/page/77">turn to page 77</a>.</li>
-        <li>The world spins around you, this is too much for you to deal with. You shut the mailbox and <a href="#/page/1">turn back to page 1</a>.</li>
+        <li>If you write C++ <a href="#/page/38/language/cxx">turn to page 38</a>.</li>
+        <li>If you write C <a href="#/page/39/language/c">turn to page 39</a>.</li>
+        <li>If you write Fortran <a href="#/page/42/language/fortran">turn to page 42</a>.</li>
+      </ul>
+    </div>
+
+    <div class="page" id="page-38">
+      <div class="page-number">Page 38</div>
+      <h2>Porting C++ Code</h2>
+      <img src="img/ISO_C++_Logo.svg" height="150">
+      <p>C++ is a multi-paradigm programming language. It is flexible and allows you to get performance where you need it.</p>
+      <p>It enables you to build <em>high-level, zero-cost abstractions</em>.</p>
+      <p>It is also a complex language: you have many options to choose from in your quest for a path to GPU acceleration.</p>
+      <ul>
+        <li>You are <em>adventurous</em>. You take this opportunity to rewrite your performance-critical kernels using one the new high-level, parallel programming libraries and <a href="#/page/77/framework/library">turn to page 77</a>.</li>
+        <li>You are intimately familiar with <a href="https://docs.nvidia.com/cuda/index.html">CUDA</a>. You decide to try the automated conversion tools to the HIP language and <a href="#/page/88/framework/hip">turn to page 88</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <code>pragma</code>-based technology and <a href="#/page/56/framework/pragma">turn to page 56</a>.</li>
+      </ul>
+    </div>
+
+    <div class="page" id="page-39">
+      <div class="page-number">Page 39</div>
+      <h2>Porting C Code</h2>
+      <img src="img/The_C_Programming_Language_logo.svg" height="150">
+      <p>.</p>
+      <p>C is a low-level, systems-programming language. You can be as close to the metal as you need to squeeze performance from your application.</p>
+      <p>You have two options to choose from in your quest for a path to GPU acceleration.</p>
+      <ul>
+        <li>You are intimately familiar with <a href="https://docs.nvidia.com/cuda/index.html">CUDA</a>. You decide to try the automated conversion tools to the HIP language and <a href="#/page/88/framework/hip">turn to page 88</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <code>pragma</code>-based technology and <a href="#/page/56/framework/pragma">turn to page 56</a>.</li>
+      </ul>
+    </div>
+
+    <div class="page" id="page-42">
+      <div class="page-number">Page 42</div>
+      <h2>Porting Fortran Code</h2>
+      <img src="img/640px-Lochkarte_FORTRAN.jpg">
+      <p>Fortran is the veteran of languages in computational sciences and engineering.</p>
+      <p>You have two options to choose from in your quest for a path to GPU acceleration.</p>
+      <ul>
+        <li>You are intimately familiar with <a href="https://developer.nvidia.com/cuda-fortran">CUDA Fortran</a> and the <code>iso_c_binding</code> Fortran2003 standard module. You decide to try <code>hipfort</code> and <a href="#/page/88/framework/hip">turn to page 88</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <code>pragma</code>-based technology and <a href="#/page/56/framework/pragma">turn to page 56</a>.</li>
       </ul>
     </div>
 
     <div class="page" id="page-77">
       <div class="page-number">Page 77</div>
-      <h2>People With Issues</h2>
-      <img src="img/2book33.jpg">
-      <p>Looking through the mailbox, you notice that the line of people coming around the house are all carrying two envelopes. You watch as they pass by the <em>issues</em> mailbox, place one envelope there and proceed to the <em>pull requests</em> mailbox with the second.</p>
-      <p>"We only accept <em>pull requests</em> after the matter has been discussed thoroughly in an <em>issue</em>" explains the person through the mailbox.</p>
-      <ul>
-        <li>"<a href="#/page/26/description/generic">We accept pull requests even without issues</a>", you say.</li>
-        <li>You nod in agreement and say "<a href="#/page/26/description/issue-required">we also only accept pull requests after the matter has been discussed in an issue</a>".</li>
-      </ul>
+      <h2>High-level Libraries for Portable High Performace</h2>
+      <img src="img/high-level.png">
+      <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
     </div>
 
-    <div class="page" id="page-26">
-      <div class="page-number">Page 26</div>
-      <h2>Driven to Perfection</h2>
-      <img src="img/2book36.jpg">
-      <p>The two of you stare at each other through the looking glass. Looking closer at your mirrored companion, you begin to notice the exhaustion on their face. It is the face of a person testing every single pull request manually.</p>
-      <p>"Are you OK?" you ask.</p>
-      <p>Your looking glass friend sighs and lowers their gaze.</p>
-      <p>"How do you test changes to your code?" they ask.</p>
-      <ul>
-        <li>"Easy, <a href="#/page/29/checklist/tests">my project has automated tests set up</a>," you say, beaming with pride (though the code coverage could be improved, you admit to yourself).</li>
-        <li>"The hard way," you say, as you look at the worn F5 key. You <a href="#/page/29">turn to page 29</a> in shame.</li>
-      </ul>
-    </div>
-
-    <div class="page" id="page-29">
-      <div class="page-number">Page 29</div>
-      <h2>CONTRIBUTING file</h2>
-      <img src="img/2book32.jpg">
-      <p>As you look more closely at the looking glass house, you begin to wonder 'how do they keep this house so tidy?'</p>
-      <p>On the tree next to the looking glass house you see a notice posted. It is hard to make out the words from this distance, but you manage to make out the big red headline saying GИITUBIЯTИOƆ.</p>
-      <ul>
-        <li>"<a href="#/page/56/checklist/contributing">My project has a CONTRIBUTING file</a> just like that," you say.</li>
-        <li>How curious, you think to yourself and <a href="#/page/56">turn to page 56</a>.</li>
-      </ul>
+    <div class="page" id="page-88">
+      <div class="page-number">Page 88</div>
+      <h2>The Importance of Being HIP</h2>
+      <img src="img/rocm.png">
+      <p>HIP code can be compiled to work on both AMD and Nvidia accelerators, <em>minimizing</em> the risk of code divergence.</p>
+      <p>Existing CUDA codebases can be <em>automatically converted</em> to HIP using the <code>hipify</code> tool.</p>
+      <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
     </div>
 
     <div class="page" id="page-56">
       <div class="page-number">Page 56</div>
-      <h2>An Old Friend</h2>
-      <img src="img/cheshire_cat.jpg">
-      <p>As you gaze at the notice on the tree, you suddenly notice a huge grin hovering among the branches of the tree.</p>
-      <p>You watch as the grin widens, exposing a mouthful of sharp teeth, startling you beyond words. You squeal in terror, and slam the mailbox shut.</p>
-      <p>Feeling cold sweat running down your neck, you slowly turn around. You look up to lowest branches of the tree on your side of the looking glass where a Cat slowly fades into view, beginning with the grin, and ending with the tail.</p>
-      <p>"How are you getting on?" says the Cat, as soon as there is mouth enough for it to speak with.</p>
-      <ul>
-        <li>"I feel ready to download the <a href="#/page/99">PULL_REQUEST_TEMPLATE.md</a> file", you say. You expect the cat to be confused by your words, but his grin somehow widens even more.</li>
-        <li>The cat couldn't have just talked, could it? You feel faint. Your eyes close and you find yourself slipping away. You wake up hours later, <a href="#/page/1">back where you started</a>.</li>
-      </ul>
+      <h2>A <code>pragma</code>tic Approach</h2>
+      <img src="img/pragma-based.png">
+      <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
     </div>
 
-    <div class="page" id="page-99">
-      <div class="page-number">Page 99</div>
+    <div class="page" id="page-98">
+      <div class="page-number">Page 98</div>
       <h1>Epilogue</h1>
-      <p>Your journey is complete. Your prize awaits. You are ready to return to The Hub.</p>
-      <div class="file-box">
-        <a href="#" class="file-name">PULL_REQUEST_TEMPLATE.md</a>
-        <span class="file-description">Place this file in your repository's root directory or a .github directory</span>
-      </div>
-      <div class="textarea"><textarea></textarea></div>
-      <p>You copy the contents of the <em>PULL_REQUEST_TEMPLATE.md</em> file, placing it in your repository.</p>
+      <p id="summary"></p>
+      <p>You feel confident to go on and write some high-performance code. <b>Good luck!</b></p>
       <ul>
-        <li>You decide to <a class="github-button" href="https://github.com/TalAter/open-source-templates" data-count-href="/TalAter/open-source-templates/stargazers" data-count-api="/repos/TalAter/open-source-templates#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star TalAter/open-source-templates on GitHub">Star</a> this on GitHub.</li>
-        <li>"Maybe I should <a href="https://twitter.com/intent/tweet?text=A%20GitHub%20issue%20and%20pull%20request%20template%20generator%20featuring%20Cthulhu%20and%20Lewis%20Carroll%20https%3A%2F%2Fwww.talater.com%2Fopen-source-templates%2F%20via%20%40TalAter" class="twitter-share-button" data-url="https://www.talater.com/open-source-templates/" data-text="A GitHub issue and pull request template generator featuring Cthulhu and Lewis Carroll" data-via="TalAter"><img src="img/tweet.png" class="tweet" /></a> this," you say to no one in particular.</li>
-        <li>You decide to start over and <a href="#/page/1">turn back to page 1</a>.</li>
+        <li>You decide to <a class="github-button" href="https://github.com/ENCCS/port-to-lumi" data-count-href="/ENCCS/port-to-lumi/stargazers" data-count-api="/repos/ENCCS/port-to-lumi#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ENCCS/port-to-lumi on GitHub">Star</a> this on GitHub.</li>
+        <li>"Maybe I should <a href="https://twitter.com/intent/tweet?text=Your%20Code%20and%20LUMI%20https%3A%2F%2Fenccs.github.io%2Fport-to-lumi%2F%20via%20%40EuroCC_Sweden" class="twitter-share-button" data-url="https://enccs.github.io/port-to-lumi/" data-text="Your Code and LUMI" data-via="EuroCC_Sweden"><img src="img/tweet.png" class="tweet" /></a> this," you say to no one in particular.</li>
+        <li>You decide to start over and <a href="#/page/37">turn back to page 37</a>.</li>
       </ul>
     </div>
 

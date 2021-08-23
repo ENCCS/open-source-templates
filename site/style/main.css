@@ -142,7 +142,6 @@ div.file-box a {
 }
 div.textarea {
   border: 1px solid #ddd;
-  border-top: none;
   padding: 2px 5px;
 }
 textarea {
