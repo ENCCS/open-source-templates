@@ -120,6 +120,13 @@
       <div class="page-number">Page 77</div>
       <h2>High-level Libraries for Portable High Performace</h2>
       <img src="img/high-level.png">
+      <p>High-level C++ language extensions, such as <a href="https://sycl.tech/">SYCL</a>, and libraries, such as <a href="https://kokkos.org/">Kokkos</a> and <a href="https://alpaka.readthedocs.io/">Alpaka</a>, aim at providing solutions to enable <em>portable</em>, high-performance code.</p>
+      <p>These efforts want to ensure programmer productivity at the highest possible level: deep knowledge of hardware details and low-level programming toolchains is not needed to start working with these frameworks.</p>
+      <p>Your mileage may vary:</p>
+      <ul>
+          <li>The frameworks are based on fairly recent C++ standards.</li>
+          <li>Furthermore, they are actively developed: compiler support may differ between vendors.</li>
+      </ul>
       <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
     </div>
 
@@ -127,8 +134,13 @@
       <div class="page-number">Page 88</div>
       <h2>The Importance of Being HIP</h2>
       <img src="img/rocm.png">
-      <p>HIP code can be compiled to work on both AMD and Nvidia accelerators, <em>minimizing</em> the risk of code divergence.</p>
+      <p>HIP code can be compiled to work on <em>both</em> AMD and Nvidia accelerators, <em>minimizing</em> the risk of code divergence.</p>
       <p>Existing CUDA codebases can be <em>automatically converted</em> to HIP using the <code>hipify</code> tool.</p>
+      <p>Your mileage may vary:</p>
+      <ul>
+          <li>The automatic conversion tools may not be able to convert the entirety of a CUDA codebase to HIP.</li>
+          <li>HIP code may not run optimally on Nvidia hardware.</li>
+      </ul>
       <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
     </div>
 
@@ -136,6 +148,13 @@
       <div class="page-number">Page 56</div>
       <h2>A <code>pragma</code>tic Approach</h2>
       <img src="img/pragma-based.png">
+      <p>The use of a <code>pragma</code>-based framework allows an <em>incremental</em> port of computational kernels to GPU hardware.</p>
+      <p>The <a href="">OpenACC project</a> was the first such effort in this direction. <a href="">OpenMP</a> has also added GPU offloading capabilities in its latest standards.</p>
+      <p>Your mileage may vary:</p>
+      <ul>
+          <li>Some computational kernels might have to be rewritten in low-level HIP code to perform optimally.</li>
+          <li>OpenMP and OpenACC are continuously evolving: compiler support may differ between vendors.</li>
+      </ul>
       <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
     </div>
 
