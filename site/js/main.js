@@ -57,10 +57,10 @@
   var updateTextarea = function() {
     var text = '';
     if (choices['type'] === 'gpu-yes') {
-      text = "Your code already runs on GPUs and " + content['gpu-yes-language-'+choices['language']]+"\n"+
+      text = "<p>Your code <em>already runs</em> on GPUs and " + content['gpu-yes-language-'+choices['language']]+"</p>\n"+
               content['gpu-yes-framework-'+choices['framework']];
     } else if (choices['type'] === 'gpu-no') {
-      text  = "Your code does not run on GPUs, yet, and " + content['gpu-no-language-'+choices['language']]+"\n"+
+      text  = "<p>Your code <em>does not run</em> on GPUs, yet, and " + content['gpu-no-language-'+choices['language']]+"</p>\n"+
               content['gpu-no-framework-'+choices['framework']];
     }
     text += '\n<b>Remember!</b> Profiling and tuning are <em>essential</em> to obtain good performance!';
