@@ -52,7 +52,11 @@ div.author {
   text-transform: uppercase;
   font-family: 'Ovo', serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 20px;
+}
+
+div.footnote {
+  font-size: 15px;
 }
 
 h1, h2 {
@@ -62,7 +66,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 50px;
   line-height: 50px;
   margin-bottom: 0;
 }
