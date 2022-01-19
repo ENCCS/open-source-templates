@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Port your code to LUMI</title>
+    <meta name="description" content="An interactive guide to the available paths for porting your code to LUMI, featuring Cthulhu and Lewis Carrol" />
+    <meta property="og:image" content="https://www.talater.com/open-source-templates/img/cheshire_cat.jpg"/>
+    <meta property="og:title" content="Explore port paths to LUMI"/>
+    <meta property="og:description" content="Explore paths for porting your code to LUMI with the help of Lewis Carrol and H.P. Lovecraft"/>
+    <meta property="og:url" content="https://enccs.github.io/port-to-lumi/"/>
+    <meta property="og:site_name" content="Port your code to LUMI"/>
+    <meta property="fb:admins" content="568390229" />
+    <link rel="stylesheet" href="style/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+  </head>
+  <body>
+    <a href="#/page/1" class="cover-link">
+      <div class="cover">
+        <img src="img/cyoa.png" alt="Choose Your Own Adventure" class="cyoa">
+        <h1>Your Code and LUMI</h1>
+        <h2>The Many Paths to Exascale</h2>
+        <div class="author">
+            CSC and ENCCS
+        </div>
+        <img src="img/lumi-cabinet.jpg" alt="The many paths to exascale" class="cover-image">
+        <div class="footnote">
+            Based on <a href="https://www.talater.com/open-source-templates">Open Source Templates</a>
+        </div>
+      </div>
+    </a>
+
+    <div class="page" id="page-1">
+      <div class="page-number">Page 1</div>
+      <h1>Pre-Exascale Machines on the Horizon</h1>
+      <img src="img/alice25a.gif">
+      <p>You are sitting at your desk. Your are looking at your code: a carefully constructed masterpiece, with solid foundations and a beautiful user interface.</p>
+      <p>A new fleet of (pre)-exascale machines is being built around Europe. <a href="https://www.lumi-supercomputer.eu/">LUMI is expected to deliver 550PFLOPs</a>: the most powerful of its generation.</p>
+      <p>These machines will open new avenues for high-performance computing. But you wonder, is the code ready to harness these machines? And if not, how can you port it to the next generation of supercomputers?</p>
+      <ul>
+        <li>If your code <em>can already run on GPUs</em>, <a href="#/page/37/type/gpu-yes">turn to page 37</a>.</li>
+        <li>If your code <em>cannot run on GPUs</em>, <a href="#/page/75/type/gpu-no">turn to page 75</a>.</li>
+        <li>Realizing that your boss may be looking over your shoulder, you quickly hit the <a href="#" id="boss-key">BOSS key</a>.</li>
+      </ul>
+    </div>
+
+    <div class="page" id="page-37">
+      <div class="page-number">Page 37</div>
+      <h1>A Box Full of GPUs</h1>
+      <img src="img/451px-Maelstrom-Clarke.jpg">
+      <p>Your code is already taking advantage of <em>GPU acceleration</em>, likely using the <a href="https://docs.nvidia.com/cuda/index.html">CUDA programming language</a> or <a href="https://www.openacc.org/">OpenACC directives</a>.</p>
+      <p>The LUMI GPU partition will be powered by <a href="https://www.amd.com/en/products/server-accelerators/Instinct-mi250x">AMD Instinct MI250X accelerators</a>: some changes are in order!</p>
+      <p>There is a dizzying array of options in front of you: you roll up your sleeves and start exploring.</p>
+      <ul>
+        <li>If you write C++ <a href="#/page/38/language/cxx">turn to page 38</a>.</li>
+        <li>If you write C <a href="#/page/39/language/c">turn to page 39</a>.</li>
+        <li>If you write Fortran <a href="#/page/42/language/fortran">turn to page 42</a>.</li>
+      </ul>
+      Too many decisions to take! You procrastinate for another day and go back to <a href="#/page/1">page 1</a>.
+    </div>
+
+    <div class="page" id="page-75">
+      <div class="page-number">Page 75</div>
+      <h1>A Box Full of GPUs</h1>
+      <img src="img/451px-Maelstrom-Clarke.jpg">
+      <p>Your code does not use <em>GPU acceleration</em>, yet.</p>
+      <p>The LUMI GPU partition will be powered by <a href="https://www.amd.com/en/products/server-accelerators/Instinct-mi250x">AMD Instinct MI250X accelerators</a>: some changes are in order!</p>
+      <p>There is a dizzying array of options in front of you: you roll up your sleeves and start exploring.</p>
+      <ul>
+        <li>If you write C++ <a href="#/page/38/language/cxx">turn to page 38</a>.</li>
+        <li>If you write C <a href="#/page/39/language/c">turn to page 39</a>.</li>
+        <li>If you write Fortran <a href="#/page/42/language/fortran">turn to page 42</a>.</li>
+      </ul>
+      Too many decisions to take! You procrastinate for another day and go back to <a href="#/page/1">page 1</a>.
+    </div>
+
+    <div class="page" id="page-38">
+      <div class="page-number">Page 38</div>
+      <h1>Porting C++ Code</h1>
+      <img src="img/ISO_C++_Logo.svg" height="150">
+      <p>C++ is a multi-paradigm programming language. It is flexible and allows you to get performance where you need it.</p>
+      <p>It enables you to build <em>high-level, zero-cost abstractions</em>.</p>
+      <p>It is also a complex language: you have many options to choose from in your quest for a path to GPU acceleration.</p>
+      <ul>
+        <li>You are <em>adventurous</em>. You take this opportunity to rewrite your performance-critical kernels using one the new high-level, parallel programming libraries and <a href="#/page/77/framework/library">turn to page 77</a>.</li>
+        <li>You are intimately familiar with <a href="https://docs.nvidia.com/cuda/index.html">CUDA</a>. You decide to try the automated conversion tools to the HIP language and <a href="#/page/88/framework/hip">turn to page 88</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <code>pragma</code>-based technology and <a href="#/page/56/framework/pragma">turn to page 56</a>.</li>
+      </ul>
+      Too many decisions to take! You procrastinate for another day and go back to <a href="#/page/1">page 1</a>.
+    </div>
+
+    <div class="page" id="page-39">
+      <div class="page-number">Page 39</div>
+      <h1>Porting C Code</h1>
+      <img src="img/The_C_Programming_Language_logo.svg" height="150">
+      <p>.</p>
+      <p>C is a low-level, systems-programming language. You can be as close to the metal as you need to squeeze performance from your application.</p>
+      <p>You have two options to choose from in your quest for a path to GPU acceleration.</p>
+      <ul>
+        <li>You are intimately familiar with <a href="https://docs.nvidia.com/cuda/index.html">CUDA</a>. You decide to try the automated conversion tools to the HIP language and <a href="#/page/88/framework/hip">turn to page 88</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <code>pragma</code>-based technology and <a href="#/page/56/framework/pragma">turn to page 56</a>.</li>
+      </ul>
+      Too many decisions to take! You procrastinate for another day and go back to <a href="#/page/1">page 1</a>.
+    </div>
+
+    <div class="page" id="page-42">
+      <div class="page-number">Page 42</div>
+      <h1>Porting Fortran Code</h1>
+      <img src="img/640px-Lochkarte_FORTRAN.jpg">
+      <p>Fortran is the veteran of languages in computational sciences and engineering.</p>
+      <p>You have two options to choose from in your quest for a path to GPU acceleration.</p>
+      <ul>
+        <li>You are intimately familiar with <a href="https://developer.nvidia.com/cuda-fortran">CUDA Fortran</a> and the <code>iso_c_binding</code> Fortran2003 standard module. You decide to try <code>hipfort</code> and <a href="#/page/88/framework/hip">turn to page 88</a>.</li>
+        <li>You are more comfortable with a framework for <em>descriptive</em> parallelism. You decide to use <code>pragma</code>-based technology and <a href="#/page/56/framework/pragma">turn to page 56</a>.</li>
+      </ul>
+      Too many decisions to take! You procrastinate for another day and go back to <a href="#/page/1">page 1</a>.
+    </div>
+
+    <div class="page" id="page-77">
+      <div class="page-number">Page 77</div>
+      <h1>High-level Libraries for Portable High Performace</h1>
+      <img src="img/high-level.png">
+      <p>High-level C++ language extensions, such as <a href="https://sycl.tech/">SYCL</a>, and libraries, such as <a href="https://kokkos.org/">Kokkos</a> and <a href="https://alpaka.readthedocs.io/">Alpaka</a>, aim at providing solutions to enable <em>portable</em>, high-performance code.</p>
+      <p>These efforts want to ensure programmer productivity at the highest possible level: deep knowledge of hardware details and low-level programming toolchains is not needed to start working with these frameworks.</p>
+      <p>Your mileage may vary:</p>
+      <ul>
+          <li>The frameworks are based on fairly recent C++ standards.</li>
+          <li>Furthermore, they are actively developed: compiler support may differ between vendors.</li>
+      </ul>
+      <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
+    </div>
+
+    <div class="page" id="page-88">
+      <div class="page-number">Page 88</div>
+      <h1>The Importance of Being HIP</h1>
+      <img src="img/rocm.png">
+      <p>HIP code can be compiled to work on <em>both</em> AMD and Nvidia accelerators, <em>minimizing</em> the risk of code divergence.</p>
+      <p>Existing CUDA codebases can be <em>automatically converted</em> to HIP using the <code>hipify</code> tool.</p>
+      <p>Your mileage may vary:</p>
+      <ul>
+          <li>The automatic conversion tools may not be able to convert the entirety of a CUDA codebase to HIP.</li>
+          <li>HIP code may not run optimally on Nvidia hardware.</li>
+      </ul>
+      <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
+    </div>
+
+    <div class="page" id="page-56">
+      <div class="page-number">Page 56</div>
+      <h1>A <code>pragma</code>tic Approach</h1>
+      <img src="img/pragma-based.png">
+      <p>The use of a <code>pragma</code>-based framework allows an <em>incremental</em> port of computational kernels to GPU hardware.</p>
+      <p>The <a href="https://www.openacc.org/">OpenACC project</a> was the first such effort in this direction. <a href="http://openmp.org/">OpenMP</a> has also added GPU offloading capabilities in its latest standards.</p>
+      <p>Your mileage may vary:</p>
+      <ul>
+          <li>Some computational kernels might have to be rewritten in low-level HIP code to perform optimally.</li>
+          <li>OpenMP and OpenACC are continuously evolving: compiler support may differ between vendors.</li>
+      </ul>
+      <p>You have reached the end of this adventure: you leaf through to the <a href="#/page/98">last page</a>.</p>
+    </div>
+
+    <div class="page" id="page-98">
+      <div class="page-number">Page 98</div>
+      <h1>Epilogue</h1>
+      <img src="img/ENCCS_CSC_logos.jpg">
+      <p>You feel ready to go on and write some high-performance code.</p>
+      <p id="summary"></p>
+      <p>Want to talk with HPC experts about your software? Send us an email: <a href="mailto:info@enccs.se">info@enccs.se</a>. <b>Good luck!</b></p>
+      <p>Before moving on to your next adventure:</p>
+      <ul>
+        <li>You subscribe to the <a href="https://enccs.se/newsletter">ENCCS Newsletter</a> and get the latest news on LUMI and HPC training.</li>
+        <li>"Maybe I should <a href="https://twitter.com/intent/tweet?text=Your%20Code%20and%20LUMI%20https%3A%2F%2Fenccs.github.io%2Fport-to-lumi%2F%20via%20%40EuroCC_Sweden" class="twitter-share-button" data-url="https://enccs.github.io/port-to-lumi/" data-text="Your Code and LUMI" data-via="EuroCC_Sweden"><img src="img/tweet.png" class="tweet" /></a> this," you say to no one in particular.</li>
+        <li>You decide to start over and <a href="#/page/1">turn back to page 1</a>.</li>
+      </ul>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://rawgit.com/flatiron/director/master/build/director.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/download.min.js"></script>
+  </body>
+</html>

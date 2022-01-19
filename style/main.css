@@ -1,0 +1,178 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  color: #515151;
+  font-weight: 300;
+  line-height: 33px;
+}
+
+.page {
+  padding: 10px 10px;
+  width: auto;
+}
+
+.cover {
+  margin: 10px 10px;
+  padding: 5px 10px;
+  width: auto;
+  text-align: center;
+  color: #515151;
+}
+a.cover-link {
+  text-decoration: none;
+}
+
+.cover h1 {
+  border-top: 1px solid #00284a;
+  padding-top: 15px;
+  margin-top: 21px;
+}
+
+.cover h2 {
+  border-bottom: 1px solid #00284a;
+  padding-bottom: 9px;
+  margin-bottom: 0;
+}
+img.cover-image {
+  width: 70%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.cyoa {
+  margin-top: 27px;
+  width: 80%;
+  max-width: 374px;
+}
+div.author {
+  text-transform: uppercase;
+  font-family: 'Ovo', serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+div.footnote {
+  font-size: 15px;
+}
+
+h1, h2 {
+  font-family: 'Ovo', serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+p {
+  text-align: justify;
+  clear: left;
+}
+p:first-of-type:first-letter {
+  float: left;
+  color: #bf9456;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: Georgia;
+}
+.page img {
+  width: 40%;
+  float: right;
+  margin-left: 10px;
+}
+#page-37 img {
+  width: 27%;
+}
+#page-38 img {
+  width: 30%;
+}
+#page-42 img {
+  width: 30%;
+}
+#page-75 img {
+  width: 30%;
+}
+#page-26 img {
+  width: 30%;
+}
+em {
+  font-weight: 400;
+}
+a {
+  font-weight: 400;
+  color: #bf9456;
+}
+ul {
+  clear: left;
+}
+div.page-number {
+  text-align: right;
+  font-size: 15px;
+}
+div.file-box {
+  clear: both;
+  margin: 50px 0 0 0;
+  padding: 7px 3px 5px 25px;
+  border: 1px solid #ddd;
+  line-height: 20px;
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-image: url("../img/file.png");
+  background-repeat: no-repeat;
+  background-position: 7px 8px;
+  color: #888;
+}
+div.file-box:hover {
+  background-color: #f3f3f3;
+}
+div.file-box a {
+  color: #4078c0;
+  text-decoration: none;
+  margin-right: 30px;
+}
+div.textarea {
+  border: 1px solid #ddd;
+  padding: 2px 5px;
+}
+textarea {
+  width: 100%;
+  border: none;
+  padding: 0 0;
+  margin: 0 0;
+  min-height: 300px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+  line-height: 18px;
+  color: #515151;
+}
+
+img.tweet {
+  width:  auto;
+  float: none;
+  margin-left: 0;
+  height: 22px;
+}
+
+@media (min-width: 992px) {
+  .page {
+    padding: 10px 20%;
+  }
+  .cover {
+    margin: 10px 23%;
+    border: 1px solid #eee;
+  }
+}
